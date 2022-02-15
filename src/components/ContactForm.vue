@@ -115,8 +115,15 @@ export default {
       this.phone = null;
       console.log('email: ' + this.email);
       this.email = '';
+      console.log('product: ' + this.$refs.product.value);
+      this.product = '';
+      console.log('about: ' + this.$refs.about.value);
+      this.about = '';
       console.log('message: ' + this.message);
       this.message = '';
+      console.log('location: ' + this.$refs.location.value);
+      this.location = '';
+      alert("All red fields are required!")
     },
 
     validateFirstName() {
