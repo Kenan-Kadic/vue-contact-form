@@ -107,6 +107,11 @@ export default {
 
   methods: {
     submitForm(){
+      this.validateFirstName(),
+      this.validateLastName(),
+      this.validatePhone(),
+      this.validateEmail(),
+      this.validateMessage(),
       console.log('firstName: ' + this.firstName);
       this.firstName = '';
       console.log('lastName: ' + this.lastName);
