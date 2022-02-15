@@ -46,7 +46,7 @@
         <option value="radio">Radio</option>
         <option value="referral">Referral</option>
       </select>
-      <p v-if="hearAboutUsValidity === 'invalid'">Please make a valid selection!</p>
+      <p v-if="aboutValidity === 'invalid'">Please make a valid selection!</p>
     </div>
     <div class="form-control" :class="{invalid: messageValidity === 'invalid'}">
       <label for="message">Message: </label>
