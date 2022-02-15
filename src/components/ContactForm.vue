@@ -82,7 +82,7 @@ export default {
       email: '',
       product: '',
       message: '',
-      about: '',
+      about: null,
       firstNameValidity: 'pending',
       lastNameValidity: 'pending',
       phoneValidity: 'pending',
@@ -94,15 +94,7 @@ export default {
   },
 
   watch: {
-   validateAbout: function(val) {
-     if(val == 0) {
-       alert('please select a service');
-       this.aboutValidity = 'invalid';
-       return false;
-     } else {
-       this.aboutValidity = 'valid';
-     }
-   }
+
 },
 
   methods: {
@@ -112,6 +104,7 @@ export default {
       this.validatePhone(),
       this.validateEmail(),
       this.validateMessage(),
+      this.validateAbout(),
       console.log('firstName: ' + this.firstName);
       this.firstName = '';
       console.log('lastName: ' + this.lastName);
@@ -120,8 +113,6 @@ export default {
       this.phone = null;
       console.log('email ' + this.email);
       this.email = '';
-      console.log('product' + this.product);
-      this.product = '';
       console.log('message' + this.message);
       this.message = '';
 
@@ -162,6 +153,16 @@ export default {
         this.messageValidity = 'valid';
       }
     },
+
+    validateAbout: function(val) {
+     if(val == 0) {
+       alert('please select a service');
+       this.aboutValidity = 'invalid';
+       return false;
+     } else {
+       this.aboutValidity = 'valid';
+     }
+   }
   },
 };
 </script>
