@@ -1,7 +1,8 @@
 <template>
   <form @submit.prevent="submitForm">
-  <div class="form title">
+  <div class="form-title">
     <h3> Contact Us</h3>
+    </div>
     <div class="form-control" :class="{invalid: firstNameValidity === 'invalid'}">
       <label for="first-name">First Name:</label>
       <input id="first-name" name="first-name" type="text" v-model.trim="firstName" @blur="validateFirstName" />
@@ -65,7 +66,7 @@
       </select>
       <p v-if="locationValidity === 'invalid'">Please make a valid selection!</p>
     </div>
-  </div>
+
     <button>Submit</button>
     <div>
     <p>DON"T HESITATE. WE'RE HERE TO HELP!</p>
@@ -197,6 +198,10 @@ form {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   padding: 2rem;
   background-color: #ffffff;
+}
+.form-title {
+  text-align: center;
+  font-size: 30px;
 }
 
 .form-control {
